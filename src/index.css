@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 30% 6%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 25% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 25% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 45 100% 51%;
+    --primary-foreground: 220 30% 6%;
+
+    --secondary: 200 100% 45%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 20% 20%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 280 100% 65%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 45 100% 51%;
+
+    --radius: 1rem;
+
+    --celebration-gold: 45 100% 51%;
+    --celebration-blue: 200 100% 45%;
+    --celebration-purple: 280 100% 65%;
+    --celebration-pink: 320 100% 70%;
+    
+    --gradient-celebration: linear-gradient(135deg, hsl(var(--celebration-gold)), hsl(var(--celebration-pink)));
+    --gradient-hero: linear-gradient(180deg, hsl(var(--background)), hsl(220 30% 10%));
+    
+    --shadow-glow: 0 0 60px hsl(var(--celebration-gold) / 0.3);
+    --shadow-card: 0 20px 60px hsl(0 0% 0% / 0.5);
+    
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 220 25% 10%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 45 100% 51%;
+    --sidebar-primary-foreground: 220 30% 6%;
+    --sidebar-accent: 220 20% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 45 100% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
