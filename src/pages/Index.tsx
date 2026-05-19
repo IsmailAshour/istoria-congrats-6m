@@ -122,7 +122,7 @@ const Index = () => {
               className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-2 animate-float drop-shadow-[0_14px_30px_hsl(var(--celebration-blue)/0.3)]"
             />
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-foreground animate-fade-rise">
-              iStoria reached{" "}
+              {showCelebration ? "iStoria reached" : "iStoria is on the way to"}{" "}
               <span className="text-primary">6 Million</span>
             </h1>
             <div className="animate-fade-rise [animation-delay:120ms]">
@@ -179,16 +179,14 @@ const Index = () => {
             </div>
           )}
 
-          {/* Social Share */}
-          {showCelebration && (
-            <div className="animate-scale-in">
-              <SocialShare
-                shareUrl={data.social_sharing.share_url}
-                shareText={data.social_sharing.share_text}
-                hashtags={data.social_sharing.hashtags}
-              />
-            </div>
-          )}
+          {/* Social Share — always visible (approaching + celebration) */}
+          <div className="animate-fade-rise [animation-delay:540ms]">
+            <SocialShare
+              shareUrl={data.social_sharing.share_url}
+              shareText={data.social_sharing.share_text}
+              hashtags={data.social_sharing.hashtags}
+            />
+          </div>
 
           {/* Footer */}
           <div className="text-center text-sm text-muted-foreground pt-6">
