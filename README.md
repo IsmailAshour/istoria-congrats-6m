@@ -1,73 +1,34 @@
-# Welcome to your Lovable project
+# iStoria — 6 Million Users 🎉
 
-## Project info
+A standalone celebration site for iStoria reaching 6,000,000 learners.
 
-**URL**: https://lovable.dev/projects/9d262d33-719a-460f-8dd9-2a70a42881ff
+Live milestone data is polled from `https://backend.istoria.app/api/6million`
+every 5 seconds. The page handles both the approaching state (counting up
+toward 6M with a live progress bar) and the celebration state (winner, prize,
+and confetti once the milestone is reached).
 
-## How can I edit this code?
+## Tech
 
-There are several ways of editing your application.
+- Vite + React + TypeScript
+- Tailwind CSS + shadcn-ui
+- @tanstack/react-query
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/9d262d33-719a-460f-8dd9-2a70a42881ff) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Develop
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Build
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+npm run build
+npm run preview
+```
 
-**Use GitHub Codespaces**
+## Lint
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/9d262d33-719a-460f-8dd9-2a70a42881ff) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```sh
+npm run lint
+```

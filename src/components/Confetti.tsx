@@ -14,8 +14,8 @@ export const Confetti = ({ enabled }: { enabled: boolean }) => {
   useEffect(() => {
     if (enabled) {
       const colors = [
-        "hsl(var(--celebration-gold))",
         "hsl(var(--celebration-blue))",
+        "hsl(var(--celebration-gold))",
         "hsl(var(--celebration-purple))",
         "hsl(var(--celebration-pink))",
       ];
@@ -41,7 +41,7 @@ export const Confetti = ({ enabled }: { enabled: boolean }) => {
       {pieces.map((piece) => (
         <div
           key={piece.id}
-          className="absolute w-3 h-3 animate-confetti-fall"
+          className="absolute w-2.5 h-3.5 rounded-[2px] animate-confetti-fall"
           style={{
             left: `${piece.left}%`,
             animationDelay: `${piece.delay}s`,

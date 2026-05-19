@@ -26,34 +26,34 @@ interface WinnerCardProps {
 
 export const WinnerCard = ({ winner, prize }: WinnerCardProps) => {
   return (
-    <Card className="p-8 bg-card border-2 border-primary shadow-[var(--shadow-card)] animate-scale-in">
+    <Card className="p-8 md:p-10 bg-gradient-to-b from-card to-celebration-blue/5 border border-border rounded-[2rem] shadow-[var(--shadow-card)] animate-scale-in">
       <div className="text-center space-y-6">
         <div className="inline-block">
-          <Badge className="text-lg px-6 py-2 bg-gradient-to-r from-celebration-gold to-celebration-pink">
-            🏆 Winner
+          <Badge className="text-sm px-5 py-2 rounded-full font-bold bg-gradient-to-r from-primary to-secondary text-primary-foreground">
+            🏆 Milestone Winner
           </Badge>
         </div>
 
-        <Avatar className="w-32 h-32 mx-auto border-4 border-primary">
+        <Avatar className="w-28 h-28 mx-auto border-4 border-card shadow-[0_10px_26px_hsl(var(--celebration-blue)/0.28)]">
           <AvatarImage src={winner.profile_picture || undefined} />
-          <AvatarFallback className="text-4xl bg-muted">
+          <AvatarFallback className="text-4xl font-extrabold bg-celebration-blue/10 text-primary">
             {winner.name.charAt(0)}
           </AvatarFallback>
         </Avatar>
 
         <div>
-          <h2 className="text-4xl font-bold text-foreground mb-2">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-2">
             {winner.name}
           </h2>
-          <p className="text-xl text-muted-foreground">
-            User #{winner.user_id.toLocaleString()}
+          <p className="text-lg text-muted-foreground">
+            Learner #{winner.user_id.toLocaleString()}
           </p>
           <p className="text-sm text-muted-foreground mt-2">
             📍 {winner.location}
           </p>
         </div>
 
-        <div className="border-t border-border pt-6">
+        <div className="border-t border-dashed border-border pt-6">
           <div className="flex items-center justify-center gap-4 mb-4">
             <img
               src={prize.prize_image}
@@ -67,14 +67,14 @@ export const WinnerCard = ({ winner, prize }: WinnerCardProps) => {
               <p className="text-muted-foreground">{prize.prize_name}</p>
             </div>
           </div>
-          
-          <div className="bg-muted/50 rounded-lg p-4 mb-4">
+
+          <div className="bg-celebration-blue/5 rounded-2xl p-4 mb-4">
             <p className="text-lg text-foreground">
               {prize.announcement_message}
             </p>
           </div>
 
-          <Badge variant="secondary" className="text-sm">
+          <Badge variant="secondary" className="text-sm rounded-full">
             {prize.delivery_status}
           </Badge>
         </div>

@@ -52,7 +52,7 @@ export const SocialShare = ({ shareUrl, shareText, hashtags }: SocialShareProps)
         onClick={handleCopyLink}
         size="lg"
         variant="outline"
-        className="border-2 border-celebration-gold text-celebration-gold hover:bg-celebration-gold/10"
+        className="rounded-full border-2 border-border bg-card text-primary hover:bg-celebration-blue/5 font-bold"
       >
         <Copy className="mr-2 h-5 w-5" />
         Copy Link
@@ -60,7 +60,7 @@ export const SocialShare = ({ shareUrl, shareText, hashtags }: SocialShareProps)
       <Button
         onClick={handleShare}
         size="lg"
-        className="bg-gradient-to-r from-celebration-gold to-celebration-pink hover:opacity-90 transition-opacity"
+        className="rounded-full font-bold bg-gradient-to-r from-primary to-celebration-blue hover:opacity-90 transition-opacity text-primary-foreground"
       >
         <Share2 className="mr-2 h-5 w-5" />
         Share the News
@@ -74,7 +74,7 @@ export const SocialShare = ({ shareUrl, shareText, hashtags }: SocialShareProps)
         }
         size="lg"
         variant="outline"
-        className="border-2 border-celebration-blue text-celebration-blue hover:bg-celebration-blue/10"
+        className="rounded-full border-2 border-border bg-card text-foreground hover:bg-muted font-bold"
       >
         <Twitter className="mr-2 h-5 w-5" />
         Tweet

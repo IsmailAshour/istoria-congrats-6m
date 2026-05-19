@@ -30,12 +30,12 @@ export const CounterDisplay = ({ targetCount, duration = 2000 }: CounterDisplayP
   };
 
   return (
-    <div className="text-center space-y-2">
-      <div className="text-7xl md:text-9xl font-bold bg-gradient-to-r from-celebration-gold via-celebration-pink to-celebration-purple bg-clip-text text-transparent animate-pulse-glow">
+    <div className="text-center space-y-3">
+      <div className="text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tight leading-none bg-gradient-to-br from-primary to-celebration-blue/70 bg-clip-text text-transparent">
         {formatNumber(count)}
       </div>
-      <div className="text-2xl md:text-3xl text-muted-foreground font-semibold">
-        Users Milestone
+      <div className="text-lg md:text-2xl text-muted-foreground font-semibold">
+        learners and counting
       </div>
     </div>
   );
